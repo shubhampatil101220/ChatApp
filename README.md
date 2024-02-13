@@ -24,16 +24,18 @@
     <h1>Project Overview</h1>
     <ul>
       <li>
+        <h2>BackEnd:</h2>
         Create a Microsoft C# web API on Visual Studio 2022
         <ul>
           <li>Install the Microsoft.AspNet.SignalR nuget package</li>
           <li>Add the following code to the project:</li>
           <pre>
-            // Insert code snippet here
+            //Write your code in Backend
           </pre>
         </ul>
       </li>
       <li>
+         <h2>FrontEnd:</h2>
         Create an Angular app with the name ClientApp
         <ul>
           <li>
