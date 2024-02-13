@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>README</title>
-    <style>
-      h1 {
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      li > ul {
-        margin-left: 20px;
-      }
-    </style>
-  </head>
+
   <body>
     <h1>Project Overview</h1>
     <ul>
