@@ -20,7 +20,16 @@ export class ChatService {
        this.start();
        this.connection.on("ReceiveMessage", (user:string, message:string,messageTime:string) => {
        this.messages = [...this.messages,{user,message,messageTime}];
-       this.messages$.next(this.messages); });
+       this.messages$.next(this.messages);
+
+         
+       if(message.includes("has Left the Group") || message.includes("has Joined the Group"))
+       {
+         this.showSuccessTopLeft(message);
+       }
+     
+       
+       });
        this.connection.on("ConnectedUser",(users:any)=>{
        this.connectedUsers$.next(users); });
 
@@ -51,5 +60,8 @@ export class ChatService {
   //leave Room
   public async leaveChat(){
     return this.connection.stop();
+  }
+   showSuccessTopLeft(user:string) {
+    this.toast.success({detail:"SUCCESS",summary:user,duration:6000, position:"topRight"});
   }
 }
