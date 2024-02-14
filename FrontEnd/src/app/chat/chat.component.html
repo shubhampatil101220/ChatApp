@@ -32,14 +32,14 @@
             </div>
             <div class="offcanvas-body">
   
-              <ng-container >
+              <ng-container *ngFor="let user of this.chatService.connectedUsers$ | async">
                 <!---- async is used to directly subscribed and unsubscribed-->
   
                 <div class="chat_list border-top" >
                   <div class="chat_people">
                     <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt=""> </div>
                     <div class="chat_ib mt-3">
-                      <h5 class=""><span class="online"></span></h5>
+                      <h5 class="text-white">{{user}}<span class="online"></span></h5>
                     </div>
                   </div>
                 </div>
