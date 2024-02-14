@@ -15,7 +15,7 @@ namespace ChatApplication.Hub
             await Groups.AddToGroupAsync(Context.ConnectionId, groupName: userConnection.Room!);
             _connection[Context.ConnectionId] = userConnection;
             await Clients.Group(userConnection.Room!) //clientProxy
-              .SendAsync("ReceiveMessage", "Lets program Bot",$"{userConnection.User} has joined the Group",DateTime.Now);//task
+              .SendAsync("ReceiveMessage", "Lets program Bot",$"{userConnection.User} has Joined the Group",DateTime.Now);//task
             await SendConnectedUser(userConnection.Room!);
 
         }
