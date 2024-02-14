@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { JoinRoomComponent } from './join-room/join-room.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatService } from './chat.service';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChatService } from './chat.service';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
